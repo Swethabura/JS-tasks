@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <script>
+        var a = +prompt("Input first number");
+        var b = +prompt("Input the second number");
+        var ope = prompt("Input operator. eg: '+', '-', '/', '*' or '%'");
+        switch(ope){
+            case '+':
+               console.log("num1 = "+a, "num2 = "+b);               
+               console.log("num1 + num2 = "+ (a+b));
+               break;
+            case '-':
+               console.log("num1 = "+a, "num2 = "+b);
+               console.log("num1 - num2 = "+ (a-b));
+               break;
+            case '*':
+               console.log("num1 = "+a, "num2 = "+b);
+               console.log("num1 * num2 = "+ (a*b));
+               break;
+            case '/':
+               console.log("num1 = "+a, "num2 = "+b);
+               console.log("num1 / num2 = "+ (a/b));
+               break;
+            case '%':
+               console.log("num1 = "+a, "num2 = "+b);
+               console.log("num1 % num2 = "+ (a%b));
+               break;
+            default:
+                console.log("num1 = "+a, "num2 = "+b);
+                console.log("Enter the operator properly!!!");
+        }
+    </script>
+    
+</body>
+</html>

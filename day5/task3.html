@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount for calculator</title>
+</head>
+<body>
+    <script>
+       var a = +prompt("Enter the amount of calculator to know the discount percentage");
+
+       switch(true){
+        case a>200:
+            console.log("You got 15% discount!!");
+            break;
+        case a>=100:
+            console.log("You got 10% discount!");
+            break;
+        case a>=50:
+            console.log("You got 5% discount!");
+            break;
+        default:
+            console.log("Oops!! You got no discount!");
+            
+       }
+
+
+    </script>
+    
+</body>
+</html>

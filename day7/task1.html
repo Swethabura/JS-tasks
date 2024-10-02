@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array-evenodd</title>
+  </head>
+  <body>
+    <script>
+      var evensum = 0;
+      var oddsum = 0;
+      var arr = [23, 54, 67, 64, 46, 95, 98];
+      console.log("Array = " + "[ " +arr+" ]");
+      console.log("Even numbers");
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+          console.log(arr[i]);
+          evensum += arr[i];
+        }
+      }
+      console.log("Odd numbers");
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0) {
+          console.log(arr[i]);
+          oddsum += arr[i];
+        }
+      }
+      console.log("sum of even numbers: " + evensum);
+      console.log("sum of odd numbers: " + oddsum);
+    </script>
+  </body>
+</html>

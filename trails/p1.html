@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to JavaScript</h1>
+    <p class="para">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
+      itaque expedita inventore dolores obcaecati maxime temporibus a tempora
+      corrupti esse. Velit nam id et esse dolorem! Perferendis suscipit ad
+      maxime.
+    </p>
+
+    <h2>content</h2>
+    <h2>content</h2>
+    <h2>content</h2>
+
+    <script>
+        console.log(document);
+      var a = document.getElementsByTagName("h1");
+      console.log(a[0].innerHTML);
+
+      var b = document.getElementsByClassName("para");
+      b = document.querySelector(".para").style.color="red";
+      console.log(b[0].innerText);
+
+      var c = document.querySelectorAll("h2");
+      console.log(c);
+
+      var d = document.querySelector("h2").style.font="20px cursive";
+      d = document.querySelector("h2").style.color="blue";
+      console.log(d);
+
+      var e = document.querySelector("h1").innerText = "Text changed";
+       
+      var f = document.querySelectorAll("h2");
+      f[0].innerHTML = "<h1>"+" content1 "+"</h1>";
+
+
+
+    </script>
+  </body>
+</html>

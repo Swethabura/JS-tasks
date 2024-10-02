@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String reverse</title>
+  </head>
+  <body>
+    <script>
+      var arr1 = "hello";
+      var arr2 = "";
+
+      console.log("String: " + arr1);
+      for (i = arr1.length - 1; i >= 0; i--) {
+        arr2 += arr1[i];
+      }
+      console.log("String in reverse: " + arr2);
+
+      /*
+       i value        condition         Code        updation
+
+       5-1=4            true           ""+o=o         3      i value is taken from arr1&
+         3              true            o+l=ol        2      adding the charcters from arr1 to arr2.
+         2              true             oll          1
+         1              true             olle         0
+         0              true            olleh        -1
+        -1              false            
+                       
+    */
+   /*    
+      var a = "hello";
+      var str = "";
+
+      for (i of a) {
+        str = i + str;
+      }
+      console.log(str); */
+    </script>
+  </body>
+</html>

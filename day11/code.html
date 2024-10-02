@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function createElements() {
+            // Create a document fragment
+            const fragment = document.createDocumentFragment();
+            
+            // Create first span
+            const span1 = document.createElement('span');
+            span1.textContent = 'This is the first line.';
+            fragment.appendChild(span1);
+            
+            // Add a <br> tag
+            fragment.appendChild(document.createElement('br'));
+            
+            // Create second span
+            const span2 = document.createElement('span');
+            span2.textContent = 'This is the second line.';
+            fragment.appendChild(span2);
+            
+            // Add another <br> tag
+            fragment.appendChild(document.createElement('br'));
+        
+            // Create third span
+            const span3 = document.createElement('span');
+            span3.textContent = 'This is the third line.';
+            fragment.appendChild(span3);
+            
+            // Return the fragment
+            return fragment;
+        }
+        
+        // Example usage
+        const container = document.getElementById('myContainer'); // Replace with your desired parent element
+        const elements = createElements();
+        container.appendChild(elements); // Append all elements at once
+    </script>
+</body>
+</html>
+
+

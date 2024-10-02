@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            /* border: 1px solid red; */
+            width: 50%;
+            height: 45vh;
+            margin: 7.5% 0 0 25%;
+            background-color:bisque ;
+            padding-top: 5%;
+            font-family:cursive;
+        }
+        h1{
+           text-align: center;
+        }
+        label{
+            padding-left: 25%;
+        }
+        button{
+            margin:4% 0 4% 45%;
+            font-family:cursive;
+        }
+        p{
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to the JavaScript World!!!</h1>
+    <div>
+    <label for="num">Enter a particular number:</label>
+    <input type="number" id="num">
+    <br><br>
+    <button id="button" onclick="myFun()">Click here</button>
+    <p id="result"></p>
+    </div>
+
+    <script>
+        function myFun(){
+            var i, num, fac;
+            fac = 1;
+            num = document.getElementById("num").value;
+            for(i=1;i<=num;i++){
+                fac*=i;
+            }
+            i = i-1;
+            document.getElementById("result").innerHTML = "The Factorial of the number "+i+" is: "+fac;
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array method for object</title>
+  </head>
+  <body>
+    <script>
+      var obj = { name: "swetha", age: "24", batch: "17r" };
+      console.log("Object: ");
+      console.log(obj);
+      console.log("Object values: ");
+      Object.entries(obj).forEach(([key, value]) => {
+      console.log(`${key}: ${value}`); // "name swetha", "age 24", "batch 17r"
+      });
+    </script>
+  </body>
+</html>

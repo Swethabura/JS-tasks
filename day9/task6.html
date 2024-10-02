@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature conversion</title>
+  </head>
+  <body>
+    <script>
+      function tempConv(val) {
+        if (b == "c") {
+          console.log("Celscious to Fahrenheit:");
+          var c = val * (9 / 5) + 32;
+          console.log(c + "f");
+        }
+        if (b == "f") {
+          console.log("Fahrenheit to Celscious:");
+          var d = (val - 32) * (5 / 9);
+          console.log(d + "c");
+        }
+      }
+      var a = prompt("Enter the temperature value: ");
+      var b = prompt("Enter the unit to convert from, ex: c or f ");
+      tempConv(a);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowels checking</title>
+  </head>
+  <body>
+    <script>
+      function removeVowels(str) {
+        let result = "";
+        for (let i = 0; i < str.length; i++) {
+          if (!"aeiouAEIOU".includes(str[i])) {
+            result += str[i];
+          }
+        }
+        return result;
+      }
+    //   let the user enter the sentence
+      let string = prompt("Type the sentence");
+      console.log("Typed sentence: "+string);
+      let result = removeVowels(string);
+      console.log("Sentence without vowels: ")
+      console.log(result);
+    </script>
+  </body>
+</html>

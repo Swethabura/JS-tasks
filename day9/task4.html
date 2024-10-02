@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Average of array elements</title>
+  </head>
+  <body>
+    <script>
+      // first way
+      console.log("First way:");
+      funAvg = (a) => {
+        var sum = 0;
+        for (i of a) {
+          sum += i;
+        }
+        avg = sum / a.length;
+        console.log(avg);
+        // return avg;
+      };
+      console.log("First array: [1,2,3]. Average of array numbers is");
+      funAvg([1, 2, 3]);
+      console.log("Second array: [3,4,5]. Average of array numbers is");
+      funAvg([3, 4, 5]);
+
+      // second way
+      console.log("Second way:");
+      var arr1 = [1, 2, 3];
+      var arr2 = [3, 4, 5];
+      function avg2(val) {
+        var sum = 0;
+        for (i of val) {
+          sum += i;
+        }
+        return sum / val.length;
+      }
+      console.log("First array: [1,2,3]. Average of array numbers is");
+      console.log(avg2(arr1));
+      console.log("Second array: [3,4,5]. Average of array numbers is");
+      console.log(avg2(arr2));
+    </script>
+  </body>
+</html>
