@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length of password</title>
+    <style>
+        label{
+            padding-left: 20%;
+            font-size: x-large;   
+        }
+        input{
+            margin-top: 10%;
+            width: 30%;
+        }
+        .alert{
+            /* border: 1px solid black; */
+            margin-top: 1%;
+            padding: 2% 0 0 42%;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+    <label for="inp">Enter your password: </label>
+    <input type="password" id="inp">
+    <button type="submit" value="submit">submit</button>
+  </form>
+    <div class="alert"></div>
+
+    <script>
+
+        let inp1 = document.getElementById("inp");
+
+        let button = document.getElementsByTagName("button")[0];
+        button.addEventListener("click", function(event){
+
+            event.preventDefault();
+
+            if(inp1.value.length==""||inp1.value.length==0){
+                document.getElementsByClassName("alert")[0].innerHTML = "Invalid password!!";
+            }
+            else if(inp1.value.length<8){
+                document.getElementsByClassName("alert")[0].innerHTML = "Your password is Weak!!";
+            }
+            else if(inp1.value.length<12){
+                document.getElementsByClassName("alert")[0].innerHTML = "Your password is Medium!!";
+            }
+            else{
+                document.getElementsByClassName("alert")[0].innerHTML = "Your password is Strong!!";
+            }
+            console.log(inp1.value);
+        })
+
+    </script>
+    
+</body>
+</html>

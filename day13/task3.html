@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <style>
+        label{
+            padding: 3% 1% 0 25%; 
+            font-size: x-large;
+        }
+        #inp1{
+            margin: 10% 0 2% 0;
+        }
+        button{
+            margin: 2% 0 0 38%;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <label for="inp1">Enter a password: </label>
+    <input type="password" id="inp1"><br>
+    <label for="inp1">Confirm password: </label>
+    <input type="password" id="inp2"> <br>
+
+    <button type="submit">submit</button>
+    <script>
+        let inp1 = document.getElementById("inp1");
+        let inp2 = document.getElementById("inp2");
+        
+        let butn = document.getElementsByTagName("button")[0];
+        butn.addEventListener("click", function(){
+            if(inp1.value==""||inp2.value==""){
+                alert("Invalid Password!!");
+            }
+            else if(inp1.value===inp2.value){
+                alert("Password created succesfully!!")
+            }
+            else{
+                alert("OOPS!! Password doesn't match!")   
+            } 
+            console.log(inp1.value);
+            console.log(inp2.value);
+        })
+
+
+        
+    </script>
+    
+</body>
+</html>

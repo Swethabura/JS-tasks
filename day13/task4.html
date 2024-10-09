@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+    <style>
+        label{
+            padding-left: 30%;
+            font-size: x-large;
+        }
+        #inp1{
+            margin: 5% 0 2% 0;
+        }
+        #div{
+            width: 45%;
+            height: 28vh;
+            /* border: 1px solid red; */
+            margin: 5% 0 0 30%;
+            background-color:papayawhip;
+        }
+        .add,.sub,.mul,.divi{
+            padding: 2% 0 0 8%;
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            /* border: 1px solid red; */
+            height: 4vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <label for="inp1">Enter first number: </label>
+    <input type="number" id="inp1"><br>
+    <label for="inp2">Enter second number: </label>
+    <input type="number" id="inp2"><br>
+
+
+    <script>
+        let inp1 = document.getElementById("inp1");
+        let inp2 = document.getElementById("inp2");
+        // console.log(inp1);
+        // console.log(inp2);
+
+        function butn(content, value){
+            let butn = document.createElement("button");
+            butn.innerHTML = content;
+            butn.style.margin = value;
+            butn.style.fontSize = "larger";
+            return butn
+        }
+
+        let butn1 = butn("Addition","8% 8% 0 25%");
+        let butn2 = butn("Subtraction","8% 8% 0 0");
+        let butn3 = butn("Multiplication","8% 8% 0 0");
+        let butn4 = butn("Divison","8% 8% 0 0");
+
+        let br = document.createElement("br");
+
+        function result(value1, value2){
+            let result = document.createElement("div");
+            result.setAttribute(value1, value2);
+            return result
+        }
+
+        let div = document.createElement("div");
+        div.setAttribute("id", "div")
+        let add = result("class", "add");
+        let sub = result("class", "sub");
+        let mul = result("class", "mul");
+        let divi = result("class", "divi");
+
+        // console.log(add)
+        
+        div.append(add, sub, mul, divi);
+        
+        document.body.append(butn1, butn2, butn3, butn4, br, div);
+        
+        butn1.addEventListener("click", function(){
+            console.log(Number(inp1.value)+Number(inp2.value));
+            document.getElementsByClassName("add")[0].innerHTML = "The Addition of the numbers "+inp1.value+" and "+ inp2.value+ " is "+ (Number(inp1.value)+Number(inp2.value));
+        });
+
+        butn2.addEventListener("click", function(){
+            console.log(inp1.value-inp2.value);
+            document.getElementsByClassName("sub")[0].innerHTML = "The Subtraction of the numbers "+inp1.value+" and "+ inp2.value+ " is "+ (inp1.value-inp2.value);
+        });
+
+        butn3.addEventListener("click", function(){
+            console.log(inp1.value*inp2.value);
+            document.getElementsByClassName("mul")[0].innerHTML = "The Multiplication of the numbers "+inp1.value+" and "+ inp2.value+ " is "+ (inp1.value*inp2.value);
+        });
+        butn4.addEventListener("click", function(){
+            console.log(inp1.value/inp2.value);
+            document.getElementsByClassName("divi")[0].innerHTML = "The Division of the numbers "+inp1.value+" and "+ inp2.value+ " is "+ (inp1.value/inp2.value);
+        });
+
+
+    </script>
+    
+</body>
+</html>

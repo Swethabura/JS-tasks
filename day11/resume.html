@@ -7,6 +7,26 @@
   </head>
   <body>
     <script>
+      function fun(paddingLeft, textContent, value1){
+      let span1 = document.createElement("div");
+      span1.style.paddingLeft = paddingLeft;
+      let strong1 = document.createElement("strong");
+      strong1.textContent = textContent;
+      let value = document.createElement("span");
+      value.innerHTML = value1;
+      span1.appendChild(strong1);
+      span1.appendChild(value);
+      return span1
+      }
+      function hr(){
+      let hr1 = document.createElement("hr");
+      hr1.style.width = "90%";
+      hr1.style.marginTop = "-1.5%";
+      hr1.style.height = "2px";
+      hr1.style.backgroundColor = "black";
+      hr1.style.border = "none";
+      return hr1
+      }
       let heading = document.createElement("h2");
       heading.innerHTML = "BURA SWETHA";
       heading.style.font = "TimesNewRoman";
@@ -14,56 +34,19 @@
       heading.style.paddingTop = "2%";
       //    console.log(heading);
 
-      let span1 = document.createElement("span");
-      span1.style.paddingLeft = "42.5%";
-      let strong1 = document.createElement("strong");
-      strong1.textContent = "Email: ";
-      let email = document.createElement("span");
-      email.innerHTML = "swethabura01@gmail.com<br>";
-      //   let email = document.createTextNode("");
-      span1.appendChild(strong1);
-      span1.appendChild(email);
-      //   console.log(span);
+      let span1=fun("42.5%", "Email: ", "swethabura01@gmail.com")
 
-      let span2 = document.createElement("span");
-      span2.style.paddingLeft = "41.5%";
-      let strong2 = document.createElement("strong");
-      strong2.innerText = "GitHub: ";
-      let anchor = document.createElement("a");
-      anchor.innerHTML = "https://github.com/dashboard<br>";
-      anchor.href = "https://github.com/dashboard";
-      span2.appendChild(strong2);
-      span2.appendChild(anchor);
+      let span2=fun("41.5%", "GitHub: ", "<a href='https://github.com/dashboard'>https://github.com/dashboard</a>")
 
-      let span3 = document.createElement("span");
-      span3.style.paddingLeft = "40%";
-      let strong3 = document.createElement("strong");
-      strong3.innerText = "LinkedIn: ";
-      let anchor2 = document.createElement("a");
-      anchor2.innerHTML = "www.linkedin.com/in/Swetha-bura<br><br>";
-      anchor2.href = "www.linkedin.com/in/Swetha-bura";
-      span3.appendChild(strong3);
-      span3.appendChild(anchor2);
-
-      let span4 = document.createElement("span");
-      span4.style.paddingLeft = "45%";
-      let strong4 = document.createElement("strong");
-      strong4.textContent = "Contact: ";
-      let contact = document.createElement("span");
-      contact.innerHTML = "7732002429<br>";
-      span4.appendChild(strong4);
-      span4.appendChild(contact);
+      let span3=fun("40%", "LinkedIn: ", "<a href='www.linkedin.com/in/Swetha-bura'>www.linkedin.com/in/Swetha-bura</a>")
+      
+      let span4=fun("45%", "Contact: ", "7732002429")
 
       let profile = document.createElement("h4");
       profile.innerHTML = "PROFILE SUMMARY";
       profile.style.paddingLeft = "5%";
 
-      let hr1 = document.createElement("hr");
-      hr1.style.width = "90%";
-      hr1.style.marginTop = "-1.5%";
-      hr1.style.height = "2px";
-      hr1.style.backgroundColor = "black";
-      hr1.style.border = "none";
+      let hr1 = hr()
 
       let summary = document.createElement("p");
       summary.innerHTML =
@@ -75,12 +58,9 @@
       education.innerHTML = "EDUCATION";
       education.style.paddingLeft = "5%";
 
-      let hr2 = document.createElement("hr");
-      hr2.style.width = "90%";
-      hr2.style.marginTop = "-1.5%";
-      hr2.style.height = "2px";
-      hr2.style.backgroundColor = "black";
-      hr2.style.border = "none";
+      let hr2 = hr()
+
+      // let span5=fun("5%", "Vaageswari College of Engineering, ", "Karimnagar, Telangana")
 
       let span5 = document.createElement("span");
       span5.style.paddingLeft = "5%";
@@ -93,6 +73,8 @@
       let strong6 = document.createElement("strong");
       strong6.innerHTML = "2022<br>";
       strong6.style.paddingLeft = "58%";
+      span5.appendChild(strong6);
+      
 
       let span6 = document.createElement("span");
       span6.style.paddingLeft = "5%";
@@ -124,70 +106,36 @@
       project.innerHTML = "PROJECTS";
       project.style.paddingLeft = "5%";
 
-      let hr3 = document.createElement("hr");
-      hr3.style.width = "90%";
-      hr3.style.marginTop = "-1.5%";
-      hr3.style.height = "2px";
-      hr3.style.backgroundColor = "black";
-      hr3.style.border = "none";
+      let hr3 = hr()
 
       let title = document.createElement("h4");
       title.innerHTML = "HTML and CSS Project";
       title.style.paddingLeft = "5%";
+      title.style.marginTop = "-0.1%";
 
       let proDesc = document.createElement("p");
       proDesc.innerHTML = "It is a webpage called Classic. The webpage is about advertising a company who helps to set up business for their clients. The webpage is basically build with HTML and CSS as well as with a little usage of JavaScript to make it more dynamic."
       proDesc.style.paddingLeft = "5%";
       proDesc.style.width = "91%";
+      proDesc.style.marginTop = "-1%";
 
       let skills = document.createElement("h4");
       skills.innerHTML = "SKILLS";
       skills.style.paddingLeft = "5%";
 
-      let hr4 = document.createElement("hr");
-      hr4.style.width = "90%";
-      hr4.style.marginTop = "-1.5%";
-      hr4.style.height = "2px";
-      hr4.style.backgroundColor = "black";
-      hr4.style.border = "none";
+      let hr4 = hr()
 
-      let span9 = document.createElement("span");
-      span9.style.paddingLeft = "5%";
-      let strong11 = document.createElement("strong");
-      strong11.innerHTML = "Technical Skills-  ";
-      let tech = document.createElement("span");
-      tech.innerHTML = "HTML, CSS, JavaScript<br>";
-      span9.appendChild(strong11);
-      span9.appendChild(tech);
+      let span9 = fun("5%", "Technical Skills- ", "HTML, CSS, JavaScript");
 
-      let span10 = document.createElement("span");
-      span10.style.paddingLeft = "5%";
-      let strong12 = document.createElement("strong");
-      strong12.innerHTML = "Soft Skills-  ";
-      let soft = document.createElement("span");
-      soft.innerHTML = "Communication skills, Time Management, Adaptability, Team Work<br>";
-      span10.appendChild(strong12);
-      span10.appendChild(soft);
+      let span10 =fun("5%", "Soft Skills- ", "Communication skills, Time Management, Adapatability, Team Work");
 
-      let span11 = document.createElement("span");
-      span11.style.paddingLeft = "5%";
-      let strong13 = document.createElement("strong");
-      strong13.innerHTML = "Other Skills-  ";
-      let other = document.createElement("span");
-      other.innerHTML = "GitHub, MS Office, PowerPoint, Excel, Word";
-      span11.appendChild(strong13);
-      span11.appendChild(other);
+      let span11 =fun("5%", "Other Skills- ", "GitHub, MS Office, PowerPoint, Excel, Word");
 
       let interest = document.createElement("h4");
       interest.innerHTML = "INTEREST";
       interest.style.paddingLeft = "5%";
 
-      let hr5 = document.createElement("hr");
-      hr5.style.width = "90%";
-      hr5.style.marginTop = "-1.5%";
-      hr5.style.height = "2px";
-      hr5.style.backgroundColor = "black";
-      hr5.style.border = "none";
+      let hr5 = hr()
 
       let ul = document.createElement("ul");
       ul.style.paddingLeft = "6%";

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1{
+            padding-top: 3%;
+            /* color: silver; */
+            text-align: center;
+        }
+        .defImg{
+            margin-left: 28%;
+            width: 40%;
+            height: 55vh;
+            /* border: 1px solid red; */
+        }
+        .butn1,.butn2{
+            font-size: large;
+            margin-top: 2.5%;
+        }
+        .butn1{
+            margin-left: 22.5%;
+        }
+        .butn2{
+            margin-left: 8%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let heading = document.createElement("h1");
+        heading.innerText = "Front-end Technologies";
+        heading.setAttribute("class", "h1");
+        
+        // console.log(heading);
+        
+        let defImg = document.createElement("img");
+        defImg.src = "https://www.interviewbit.com/blog/wp-content/uploads/2022/05/image1.png";
+        defImg.setAttribute("class", "defImg");
+
+        let br = document.createElement("br");
+
+        let butn1 = document.createElement("button");
+        butn1.innerHTML = "Click me!";
+        butn1.setAttribute("class", "butn1");
+        butn1.addEventListener("click", function(){
+            document.getElementsByClassName("defImg")
+            defImg.src ="https://austingil.com/wp-content/uploads/HTML-Blog-Cover.png";
+        })
+
+        let butn2 = document.createElement("button");
+        butn2.innerHTML = "Click me!";
+        butn2.setAttribute("class", "butn2");
+        butn2.addEventListener("click", function(){
+            document.getElementsByClassName("defImg")
+            defImg.src ="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png";
+        })
+
+        let butn3 = document.createElement("button");
+        butn3.innerHTML = "Click me!";
+        butn3.setAttribute("class", "butn2");
+        butn3.addEventListener("click", function(){
+            document.getElementsByClassName("defImg")
+            defImg.src ="https://miro.medium.com/v2/resize:fit:1200/1*LyZcwuLWv2FArOumCxobpA.png";
+        })
+
+        let butn4 = document.createElement("button");
+        butn4.innerHTML = "Click me!";
+        butn4.setAttribute("class", "butn2");
+        butn4.addEventListener("click", function(){
+            document.getElementsByClassName("defImg")
+            defImg.src ="https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png";
+        })
+                
+        document.body.append(heading, defImg,br, butn1, butn2, butn3, butn4);
+        console.log(defImg);
+    </script>
+</body>
+</html>

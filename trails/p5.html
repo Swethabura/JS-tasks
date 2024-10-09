@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #container{
+            width: 50vw;
+            height: 50vh;
+            background-color: blanchedalmond;
+            margin: 5% 0 0 25%;
+        }
+        button{
+          margin: 2% 0 0 45%;
+          font-size: large;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button onclick="randomColor()">click me!!</button>
+    <script>
+      
+      function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const a = Math.random().toFixed(2); // Alpha value (0-1)
+  const color = `rgba(${r}, ${g}, ${b}, ${a})`;
+  var container = document.getElementById("container");
+  container.style.backgroundColor = color; // Set the background color
+  console.log(container);
+}
+// Example usage
+    </script>
+  </body>
+</html>
