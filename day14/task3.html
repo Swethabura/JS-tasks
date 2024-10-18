@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse of a string</title>
+  </head>
+  <body>
+    <script>
+      // first way using split, reverse and join methods individually
+
+    //   let str = "hello, hi!"
+    //   let strToArr = str.split("")
+    //   console.log(strToArr);
+
+    //   let revStr = strToArr.reverse();
+    //   console.log(revStr);
+
+    //   var joinArray = revStr.join("");
+    //   console.log(joinArray);
+
+
+      // second way using spli, reverse, join at a time
+
+
+      let text = prompt("Enter a text")
+
+      function reverseString(str) {
+        return str.split("").reverse().join("");
+      }
+      console.log(reverseString(text));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words counter</title>
+</head>
+<body>
+    <script>
+
+          let sen = prompt("Enter a sentence");
+          console.log("Sentence: ",sen);
+          
+          function wordsCount(str){
+          const arr = str.trim().split(/\s+/gi);
+          return arr.length;
+        }
+        console.log("Words count in the sentence "+wordsCount(sen));
+
+    </script>
+    
+</body>
+</html>

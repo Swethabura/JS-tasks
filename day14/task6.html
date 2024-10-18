@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email address</title>
+</head>
+<body>
+    <script>
+        let firstName = prompt("Enter your first name ");
+        let lastName = prompt("Enter your last name ");
+
+        function lowerCase(text){
+            return text.toLowerCase();
+        }
+
+        let emailAdd = lowerCase(firstName).concat(".",lowerCase(lastName),"@gmail.com");
+        console.log("Your email id: ",emailAdd);
+        
+    </script>
+    
+</body>
+</html>
