@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of elements check in Array</title>
+</head>
+<body>
+    <script>
+        let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, [1,2,5], {name: "object"}];
+        console.log("Original Array ",arr);
+        let str = [];
+        let num = [];
+        let bool = [];
+        let arr2 =[];
+        let obj = [];
+
+        for(i of arr){
+            if(typeof(i)==='string'){
+                str.push(i);
+            }
+            else if(typeof(i)==='number'){
+                num.push(i);
+            }
+            else if(typeof(i)=== 'boolean'){
+                bool.push(i);
+            }
+            else if(Array.isArray(i)){
+                arr2.push(i);
+            }
+            else
+                obj.push(i);
+        }
+        console.log("Strings: ",str);
+        console.log("Numbers: ",num);
+        console.log("Boolean: ",bool);
+        console.log("Array: ",arr2);
+        console.log("Object: ",obj);
+        
+    </script>
+</body>
+</html>

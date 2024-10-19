@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even & Odd sum of Array elements</title>
+</head>
+<body>
+    <script>
+        let arr = [12,3,5,6,22,56,29];
+        console.log(arr);
+        let evenSum=0;
+        let oddSum =0;
+
+        for(i of arr){
+            if(i%2==0){
+                evenSum+=i;
+            }
+            else
+                oddSum+=i;
+        }
+        console.log("Even sum= ",evenSum,"Odd sum= ", oddSum)
+        
+    </script>
+    
+</body>
+</html>
