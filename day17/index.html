@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP generator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: auto;
+            height: auto;
+            background-color: aliceblue;
+        }
+        h1{
+            text-align: center;
+            padding-top: 2%;
+            font-family:sans-serif;
+        }
+        .container{
+            /* border: 1px solid red; */
+            width: 40%;
+            margin: 5% 0 0 30%;
+            height: 35vh;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: white;
+            padding-top: 2.5%;
+        }
+        .box{
+            /* border: 1px solid red; */
+            width: 85%;
+            height: 30%;
+            margin: 0 7.5% 5% 7.5%;  
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: whitesmoke;
+            font-size: xx-large;
+            font-variant-numeric: oldstyle-nums;
+            text-align: center;
+            padding-top: 1%;
+            color: rgb(26, 26, 139);
+            letter-spacing: 2px;     
+        }
+        #btn{
+            background-color: green;
+            font-size: large;
+            padding: 1.5%;
+            width: 50%;
+            margin-left: 25%;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        #btn:hover{
+            background-color: darkgreen;
+        }
+        #timer{
+            text-align: center;
+            padding: 2%;
+            font-size: medium;
+            font-family: 'Courier New', Courier, monospace;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>OTP Generator</h1>
+    <div class="container">
+        <div class="box"></div>
+        <button id="btn">Generate OTP</button>
+        <div id="timer">Time left: 0s</div>
+
+    </div>
+    
+</body>
+<script>
+    // const container = document.querySelector(".container");
+    const box = document.querySelector(".box");
+    const btn = document.getElementById("btn");
+    const timerDisplay = document.getElementById("timer");
+    let countdown;   //variable to hold the time counter 
+
+    btn.addEventListener("click", () => {
+        const char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const digits = "012345679";
+        let otp = "";
+        const otpLength = 6;
+
+        // for atleast two digits in every shuffle of otp
+        for(let i=0;i<2;i++){
+            const randomIndex = Math.floor(Math.random()*digits.length);
+            otp+= digits[randomIndex];
+        }
+
+        // for the other 4 characters in otp mixed with characters and digits
+        for(let i=2;i<otpLength;i++){
+            const randomIndex = Math.floor(Math.random()*(char.length+digits.length));
+
+            otp+= (randomIndex<char.length)?char[randomIndex]:digits[randomIndex-char.length];
+        }
+        
+        // shuffle the otp to avoid keep getting the digits at start
+        otp = otp.split('').sort(() => 0.5-Math.random()).join('');
+
+        // display otp
+        box.innerText = otp;
+
+        // start the timer
+        let timeLeft = 30;
+        timerDisplay.innerText = `Time left: ${timeLeft}s`;
+
+        // clear any existing countdown
+        clearInterval(countdown);
+
+        countdown = setInterval(() => {
+            timeLeft--;
+            timerDisplay.innerText = `Time left: ${timeLeft}s`;
+
+        if(timeLeft<=0){
+            clearInterval(countdown);
+            timerDisplay.innerText = " OTP Expired!!";
+            box.innerText = "";  //also clear the otp
+        }
+        },1000);
+    });
+
+
+</script>
+</html>
