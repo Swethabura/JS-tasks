@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            width: auto;
+            background-color: rgb(80, 20, 80);
+            text-align: center;
+        }
+        #timer{
+            margin: 17% 0 0 35%;
+            /* border: 1px solid red; */
+            width: 30%;
+            height: 15vh;
+            padding-top: 1.8%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 30px 0 rgba(0, 0, 0, 0.19);
+            background-color: rgb(170, 165, 165);
+            font-size: 400%;
+            font-variant-numeric: proportional-nums;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">00:00:00</div>
+    <script>
+        function updateTime (){
+            const clock = new Date();
+            const hours = String(clock.getHours()).padStart(2,'0');
+            const minutes = String(clock.getMinutes()).padStart(2,'0');
+            const seconds = String(clock.getSeconds()).padStart(2,'0');
+
+            const time = `${hours}:${minutes}:${seconds}`;
+            document.getElementById("timer").innerText=time;
+        }
+
+        setInterval(updateTime,1000)
+        updateTime();
+
+    </script>
+    
+</body>
+</html>
