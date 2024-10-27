@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Length wise sorting using filter</title>
+  </head>
+  <body>
+    <script>
+      let arr = ["swetha", "10kcoders", "classes", "time", "tasks"];
+
+      console.log("Array: ", arr);
+
+      newarr = arr.filter((i) => {
+        return i.length <= 5;
+      });
+      console.log("New Array: ");
+      console.log(newarr);
+    </script>
+  </body>
+</html>
