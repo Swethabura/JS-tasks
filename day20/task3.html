@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtering method</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        { name: "John", age: 17 },
+        { name: "Jane", age: 22 },
+        { name: "Jim", age: 15 },
+        { name: "Jack", age: 19 },
+      ];
+
+      console.log("Array:", people);
+
+      var adults = people.filter((val) => {
+        return val.age > 18;
+      });
+
+      console.log("Adults:", adults);
+    </script>
+  </body>
+</html>
