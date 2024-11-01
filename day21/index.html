@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter the name" id="inp1">
+    <input type="number" placeholder="Enter the age" id="inp2">
+    <button id="btn">Submit</button>
+    <button id="btn2">Click here to check data</button>
+
+</body>
+<script>
+    const inp1 = document.getElementById("inp1");
+    const inp2 = document.getElementById("inp2");
+    const btn = document.getElementById("btn");
+    const btn2 = document.getElementById("btn2");
+    const array = [];
+
+    btn.addEventListener("click", () =>{
+        console.log(inp1.value)
+        console.log(inp2.value)
+
+        const newObj = {
+            name: inp1.value,
+            age: inp2.value
+        }
+
+        array.push(newObj);
+        inp1.value = "";
+        inp2.value = "";
+
+        console.log(array);
+
+        localStorage.setItem('userdata',JSON.stringify(array));
+
+    });
+    btn2.addEventListener("click", () => {
+        window.open("page.html");
+    
+    })
+
+</script>
+</html>

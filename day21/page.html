@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+    .card{
+        border: 1px solid red;
+        margin: 5px;
+    }
+   </style>
+<body>
+    <div></div>
+    <script>
+      let userData =  JSON.parse(localStorage.getItem('userdata'));
+      console.log(userData);
+
+      const div = document.querySelector("div");
+
+      const Data = userData.map((val) => {
+          
+        const card = document.createElement("div");
+        card.innerHTML = `<p>User Name:${val.name}</p><p>Age:${val.age}</p>`;
+        card.className = "card";
+
+        div.append(card);
+
+      })
+
+    </script>
+</body>
+</html>

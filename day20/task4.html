@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake store Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: auto;
+        height: 100vh;
+        padding: 10px;
+      }
+      .container {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        /* .card {
+          flex-basis: 25%;
+        } */
+      }
+      .card {
+        /* border: 1px solid black; */
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 4px 30px 0 rgba(0, 0, 0, 0.19);
+        background-color: whitesmoke;
+      }
+      .title {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 5% 0 10%;
+      }
+      .img {
+        /* border: 1px solid blue; */
+        width: 40%;
+        height: 20%;
+        margin-left: 30%;
+      }
+      .description {
+        padding: 2% 10% 0 10%;
+        text-align: center;
+        font-size: small;
+      }
+      .price,
+      .rating {
+        padding: 3% 0 0 0;
+        font-size: larger;
+        text-align: center;
+      }
+      .rating{
+        margin-bottom: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
