@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake store Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: auto;
+        height: 100vh;
+        padding: 10px;
+        background-color: rgb(243, 233, 204);
+      }
+      .container {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        /* .card {
+          flex-basis: 25%;
+        } */
+      }
+      .card {
+        /* border: 1px solid black; */
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 4px 30px 0 rgba(0, 0, 0, 0.19);
+        background-color: white;
+      }
+      .title {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 5% 0 10%;
+      }
+      .img {
+        /* border: 1px solid blue; */
+        width: 40%;
+        height: 20%;
+        margin-left: 30%;
+      }
+      .description {
+        padding: 2% 10% 0 10%;
+        text-align: center;
+        font-size: small;
+      }
+      .price,
+      .rating {
+        padding: 3% 0 0 0;
+        font-size: larger;
+        text-align: center;
+      }
+      .rating{
+        margin-bottom: 7%;
+      }
+      .btn{
+        padding: 2.5%;
+        font-size: medium;
+        margin-left: 35%;
+        margin-bottom: 12%;
+        border: none;
+        border-radius: 5px;
+        background-color:rgb(224, 209, 169);
+      }
+      .btn:hover,.btn2:hover{
+        background-color: goldenrod;
+      }
+      h1{
+        text-align: center;
+        padding: 1%;
+      }
+      .btn2{
+        padding: 1%;
+        font-size: medium;
+        border: none;
+        border-radius: 5px;
+        background-color:rgb(192, 159, 67);
+        margin-left: 88%;
+        margin-bottom: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shopping Cards</h1>
+    <button class="btn2">Check the Cart</button>
+    <div class="container">
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
