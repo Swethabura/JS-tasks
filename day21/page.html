@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>user -page</title>
 </head>
    <style>
     .card{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: 5px;
+        height: auto;
+        font-size: larger;
+        padding: 10px 0 10px 30px;
     }
    </style>
 <body>
-    <div></div>
+    <div class="card"></div>
     <script>
-      let userData =  JSON.parse(localStorage.getItem('userdata'));
-      console.log(userData);
-
       const div = document.querySelector("div");
 
-      const Data = userData.map((val) => {
-          
-        const card = document.createElement("div");
-        card.innerHTML = `<p>User Name:${val.name}</p><p>Age:${val.age}</p>`;
-        card.className = "card";
+      function displayData(){
+        const userData = JSON.parse(localStorage.getItem('userdata')) || [];
 
-        div.append(card);
+        if(userData.length > 0){
+          div.innerHTML = userData.map(user => `<p>Name: ${user.name}, Age: ${user.age}</p>`).join(" ");
+        }else{
+          div.innerHTML = "<p>No user data available</p>"
+        }
+      }
 
-      })
+      // load the data when the page loads
+      window.onload = displayData;
 
     </script>
 </body>

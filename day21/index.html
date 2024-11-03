@@ -3,44 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: auto;
+            padding: 20px;
+            background: url('https://img.freepik.com/premium-photo/create-clean-sleek-photo-plain-texture_1269188-52082.jpg?semt=ais_hybrid');
+        }
+        .container{
+            /* border: 1px solid red; */
+            width: 60%;
+            height: 35vh;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+            padding: 1%;
+        }
+        #inp1,#inp2{
+            font-size: large;
+            padding: 1%;
+            margin-bottom: 2.5%;
+            border-radius: 10px;
+        }
+        #btn{
+            margin-top: 5%;
+        }
+        #btn,#btn2{
+            font-size: large;
+            margin-bottom: 2.5%;
+            padding: 1%;
+            border: none;
+            border-radius: 7px;
+            background-color:burlywood;
+            color:brown;
+        }
+
+    </style>
 </head>
 <body>
-    <input type="text" placeholder="Enter the name" id="inp1">
-    <input type="number" placeholder="Enter the age" id="inp2">
-    <button id="btn">Submit</button>
+    <div class="container">
+    <input type="text" placeholder="Enter the name" id="inp1"><br>
+    <input type="number" placeholder="Enter the age" id="inp2"><br>
+    <button id="btn">Submit</button><br>
     <button id="btn2">Click here to check data</button>
-
+</div>
 </body>
 <script>
+    // localStorage.clear();
     const inp1 = document.getElementById("inp1");
     const inp2 = document.getElementById("inp2");
     const btn = document.getElementById("btn");
     const btn2 = document.getElementById("btn2");
-    const array = [];
+    const array = JSON.parse(localStorage.getItem('userdata')) || [];
 
     btn.addEventListener("click", () =>{
-        console.log(inp1.value)
-        console.log(inp2.value)
-
         const newObj = {
             name: inp1.value,
             age: inp2.value
         }
-
         array.push(newObj);
+        localStorage.setItem('userdata',JSON.stringify(array));
+        
         inp1.value = "";
         inp2.value = "";
-
+        
         console.log(array);
 
-        localStorage.setItem('userdata',JSON.stringify(array));
-
     });
+
+    let userPage;
+
     btn2.addEventListener("click", () => {
-        window.open("page.html");
-    
-    })
+        if(!userPage || userPage.closed){
+            userPage = window.open("page.html");
+        }else{
+            userPage.location.reload();  // refresh the already openend page
+        }
+    });
 
 </script>
 </html>
